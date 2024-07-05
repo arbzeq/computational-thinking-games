@@ -1,18 +1,14 @@
-let secretNumber = 20;
-let done = false;
+let word1 = prompt("Skriv in ett ord:");
+let word2 = prompt("Skriv in ett annat ord:");
 
-while(!done) {
-    let number = prompt("Skriv in ett tal mellan 1 och 100");
-    if(number > secretNumber) {
-        alert("För högt!");
-    }
-    else if(number < secretNumber){
-        alert("För lågt!");
-    }
-    else {
-        alert(`Du hittade det hemliga numret ${secretNumber}`);
-        done = true;
-        
-    }
+let smallestWord = Math.min(word1.length, word2.length);
+
+let sameLetters = 0;
+for(let i = 0; i < smallestWord; i++) {
     
+    if(word1[i] == word2[i]){
+        sameLetters++;
+    }
+
 }
+console.log(sameLetters);
