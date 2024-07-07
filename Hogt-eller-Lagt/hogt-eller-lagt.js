@@ -1,8 +1,9 @@
 let secretNumber = 20;
 let done = false;
 
+let number;
 while(!done) {
-    let number = prompt("Skriv in ett tal mellan 1 och 100");
+    number = prompt("Skriv in ett tal mellan 1 och 100");
     if(number > secretNumber) {
         alert("För högt!");
     }
